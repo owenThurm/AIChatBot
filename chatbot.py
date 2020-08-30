@@ -15,3 +15,10 @@ Hugo = ChatBot(name="Hugo",
                       read_only = False,
                       logic_adapters = ["chatterbot.logic.BestMatch"],
                       storage_adapter = "chatterbot.storage.SQLStorageAdapter")
+
+while(True):
+    user_input = input()
+    if(user_input == 'quit'):
+        break
+    response = Hugo.get_response(user_input)
+    print(response)
